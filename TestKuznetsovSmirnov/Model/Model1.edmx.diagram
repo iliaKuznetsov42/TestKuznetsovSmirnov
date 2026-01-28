@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="62ba07a49a264bc0a6a5f63b5145b44b" Name="Diagram1">
+        <EntityTypeShape EntityType="TestKuznetsovSmirnovModel.group" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestKuznetsovSmirnovModel.Journal" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestKuznetsovSmirnovModel.Student" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestKuznetsovSmirnovModel.Test" Width="1.5" PointX="3" PointY="5.375" IsExpanded="true" />
+        <AssociationConnector Association="TestKuznetsovSmirnovModel.FK_Student_group" ManuallyRouted="false" />
+        <AssociationConnector Association="TestKuznetsovSmirnovModel.FK_Journal_Student" ManuallyRouted="false" />
+        <AssociationConnector Association="TestKuznetsovSmirnovModel.FK_Journal_Test" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
