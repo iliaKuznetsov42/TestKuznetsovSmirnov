@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TestKuznetsovSmirnov.Class;
 
 namespace TestKuznetsovSmirnov
 {
@@ -23,6 +24,9 @@ namespace TestKuznetsovSmirnov
         public MainWindow()
         {
             InitializeComponent();
+
+            ClassFrame.MainFrame = MainFrame;
+            MainFrame.Navigate(new View.Pages.MainPAge());
         }
     }
 }

@@ -5,10 +5,24 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:TestKuznetsovSmirnov.View.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="340" d:DesignWidth="800"
       Title="MainPAge">
 
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="10" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <TextBlock Text="Тесты по дисциплине" Grid.Row="1" FontSize="40" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBlock Text="Экономика отрасли" Grid.Row="3" FontSize="40" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <Button Name="TeacherBtn" Grid.Row="5" Width="300" Content="Преподаватель" FontSize="20" Click="TeacherBtn_Click"/>
+        <Button Name="StudentBtn" Grid.Row="7" Width="300" Content="Студент" FontSize="20" Click="TeacherBtn_Click"/>
     </Grid>
 </Page>

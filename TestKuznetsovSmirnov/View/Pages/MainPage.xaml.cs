@@ -24,5 +24,10 @@ namespace TestKuznetsovSmirnov.View.Pages
         {
             InitializeComponent();
         }
+
+        private void TeacherBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using TestKuznetsovSmirnov.Model;
 
 namespace TestKuznetsovSmirnov
 {
@@ -13,5 +14,6 @@ namespace TestKuznetsovSmirnov
     /// </summary>
     public partial class App : Application
     {
+        public static TestKuznetsovSmirnovEntities context = new TestKuznetsovSmirnovEntities();
     }
 }

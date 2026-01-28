@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 
 namespace TestKuznetsovSmirnov.Class
 {
-    internal class ClassFrame
+    class ClassFrame
     {
+        static public Frame MainFrame;
     }
 }

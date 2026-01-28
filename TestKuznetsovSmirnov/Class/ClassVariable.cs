@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace TestKuznetsovSmirnov.Class
 {
-    internal class ClassVariable
+    class ClassVariable
     {
+        public static int classman;
     }
 }
