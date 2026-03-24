@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TestKuznetsovSmirnov.Class;
 
 namespace TestKuznetsovSmirnov.View.Pages
 {
@@ -27,7 +28,12 @@ namespace TestKuznetsovSmirnov.View.Pages
 
         private void TeacherBtn_Click(object sender, RoutedEventArgs e)
         {
+            ClassFrame.MainFrame.Navigate(new AuthorizationPage());
+        }
 
+        private void StudentBtn_Click(object sender, RoutedEventArgs e)
+        {
+            ClassFrame.MainFrame.Navigate(new RegistrationStudentPage());
         }
     }
 }

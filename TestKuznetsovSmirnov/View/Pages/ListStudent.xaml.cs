@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TestKuznetsovSmirnov.Class;
+using TestKuznetsovSmirnov.Model;
 
 namespace TestKuznetsovSmirnov.View.Pages
 {
@@ -23,6 +25,41 @@ namespace TestKuznetsovSmirnov.View.Pages
         public ListStudent()
         {
             InitializeComponent();
+
+            StudentCmb.SelectedValuePath = "ID";
+            StudentCmb.DisplayMemberPath = "Name";
+            StudentCmb.ItemsSource = App.context.Student.ToList();
+        }
+
+        private void GroupCmb_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            group Group = GroupCmb.SelectedItem as group;
+            if (GroupCmb.SelectedIndex == 0)
+            {
+                ListStudentDg.ItemsSource = App.context.Student.ToList();
+            }
+            else
+            {
+                ListStudentDg.ItemsSource = App.context.Student.Where(s => s.idGroup == Group.Id).ToList();
+            }
+        }
+
+        private void StudentCmb_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Student student = StudentCmb.SelectedItem as Student;
+            if (GroupCmb.SelectedIndex == 0)
+            {
+                ListStudentDg.ItemsSource = App.context.Student.ToList();
+            }
+            else
+            {
+                ListStudentDg.ItemsSource = App.context.Student.Where(s => s.idGroup == Student.ID).ToList();
+            }
+        }
+
+        private void BackBtn_Click(object sender, RoutedEventArgs e)
+        {
+            ClassFrame.MainFrame.Navigate(new Menu());
         }
     }
 }

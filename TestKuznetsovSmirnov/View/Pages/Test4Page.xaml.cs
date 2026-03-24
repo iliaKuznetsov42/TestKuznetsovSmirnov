@@ -16,18 +16,13 @@ using System.Windows.Shapes;
 namespace TestKuznetsovSmirnov.View.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для AuthorizationPage.xaml
+    /// Логика взаимодействия для Test4Page.xaml
     /// </summary>
-    public partial class AuthorizationPage : Page
+    public partial class Test4Page : Page
     {
-        public AuthorizationPage()
+        public Test4Page()
         {
             InitializeComponent();
-        }
-
-        private void OkBtn_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

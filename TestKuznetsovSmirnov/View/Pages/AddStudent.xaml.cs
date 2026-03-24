@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TestKuznetsovSmirnov.Class;
+using TestKuznetsovSmirnov.Model;
 
 namespace TestKuznetsovSmirnov.View.Pages
 {
@@ -23,6 +25,35 @@ namespace TestKuznetsovSmirnov.View.Pages
         public AddStudent()
         {
             InitializeComponent();
+        }
+
+        private void BackBtn_Click(object sender, RoutedEventArgs e)
+        {
+            ClassFrame.MainFrame.Navigate(new Menu());
+        }
+
+        private void AddGroupBtn_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void AddStudentBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if (string.IsNullOrEmpty(EnterStudentTb.Text))
+            {
+                MessageBox.Show("Заполните все поля");
+            }
+            else
+            {
+                Student newStudent = new Student()
+                {
+                    Name = EnterStudentTb.Text
+                };
+
+                App.context.Student.Add(newStudent);
+                App.context.SaveChanges();
+                MessageBox.Show("Студент добавлен");
+            }
         }
     }
 }

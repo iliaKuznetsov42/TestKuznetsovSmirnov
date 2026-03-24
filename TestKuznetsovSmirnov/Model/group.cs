@@ -19,7 +19,7 @@ namespace TestKuznetsovSmirnov.Model
             this.Student = new HashSet<Student>();
         }
     
-        public int ID { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
     
         public virtual ICollection<Student> Student { get; set; }

@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TestKuznetsovSmirnov.Class;
 
 namespace TestKuznetsovSmirnov.View.Pages
 {
@@ -23,6 +24,31 @@ namespace TestKuznetsovSmirnov.View.Pages
         public Menu()
         {
             InitializeComponent();
+        }
+
+        private void AddStudentBtn_Click(object sender, RoutedEventArgs e)
+        {
+            ClassFrame.MainFrame.Navigate(new AddStudent());
+        }
+
+        private void AddGroupBtn_Click(object sender, RoutedEventArgs e)
+        {
+            ClassFrame.MainFrame.Navigate(new AddGroup());
+        }
+
+        private void StudentListBtn_Click(object sender, RoutedEventArgs e)
+        {
+            ClassFrame.MainFrame.Navigate(new ListStudent());
+        }
+
+        private void DeleteStudentBtn_Click(object sender, RoutedEventArgs e)
+        {
+            ClassFrame.MainFrame.Navigate(new DeleteStudent());
+        }
+
+        private void BackBtn_Click(object sender, RoutedEventArgs e)
+        {
+            ClassFrame.MainFrame.Navigate(new MainPAge());
         }
     }
 }

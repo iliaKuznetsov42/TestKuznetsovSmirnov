@@ -9,6 +9,18 @@
       Title="AuthorizationPage">
 
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <TextBlock Text="Светлана Дмитриевна, введите пароль:" Grid.Row="1" FontSize="40" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <PasswordBox Name="TeachPsw" Grid.Row="3" Width="350"  />
+        <Button Name="OkBtn" Grid.Row="5" Width="100" Content="Ок" FontSize="20" Click="OkBtn_Click"/>
     </Grid>
 </Page>
+
